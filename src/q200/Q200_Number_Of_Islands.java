@@ -15,8 +15,6 @@ public class Q200_Number_Of_Islands {
 	}
 	
 	private char[][] grid;
-	private int m;
-	private int n;	
 	
 	private int[][] flags;
 			
@@ -26,12 +24,12 @@ public class Q200_Number_Of_Islands {
     	}
     	
     	this.grid = grid;
-    	this.m = grid.length;
-    	this.n = grid[0].length;
+    	int m = grid.length;
+    	int n = grid[0].length;
     	
-    	this.flags = new int[this.m][];
-    	for (int i = 0; i < this.m; i++) {
-    		this.flags[i] = new int[this.n];
+    	this.flags = new int[m][];
+    	for (int i = 0; i < m; i++) {
+    		this.flags[i] = new int[n];
     	}
         
         int curIsland = 0;
@@ -97,8 +95,10 @@ public class Q200_Number_Of_Islands {
     
     private boolean isUnvisitedLand(int i, int j)
     {
-    	return (i >= 0 && i < this.m && j >= 0 && j < this.n &&
-    			this.grid[i][j] == '1' && this.flags[i][j] == 0);
+    	return (i >= 0 && i < this.grid.length &&
+    			j >= 0 && j < this.grid[0].length &&
+    			this.grid[i][j] == '1' && 
+    			this.flags[i][j] == 0);
     }    
     
     public static void main(String[] args) {
