@@ -1,4 +1,4 @@
-package q200;
+package dyd.leetcode.q200;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -1,4 +1,4 @@
-package q205;
+package dyd.leetcode.q205;
 
 import java.util.HashMap;
 
