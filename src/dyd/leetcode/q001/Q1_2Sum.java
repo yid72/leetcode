@@ -1,4 +1,4 @@
-package q1;
+package dyd.leetcode.q001;
 
 import java.util.HashMap;
 
