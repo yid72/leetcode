@@ -1,6 +1,6 @@
 package dyd.leetcode.q024;
 
-import dyd.leetcode.ListNode;
+import dyd.leetcode.common.ListNode;
 
 public class Q24_SwapNodesInPairs {
     public ListNode swapPairs(ListNode head) {

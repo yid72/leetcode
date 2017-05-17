@@ -3,8 +3,8 @@ package dyd.leetcode.q236;
 import java.util.ArrayList;
 import java.util.List;
 
-import dyd.leetcode.PrintUtil;
-import dyd.leetcode.TreeNode;
+import dyd.leetcode.common.PrintUtil;
+import dyd.leetcode.common.TreeNode;
 
 public class Q236_LCABinaryTree {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {

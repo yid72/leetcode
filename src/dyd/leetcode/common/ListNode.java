@@ -1,4 +1,4 @@
-package dyd.leetcode;
+package dyd.leetcode.common;
 
 public class ListNode {
 	 public int val;

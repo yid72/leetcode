@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class Q205_Isomorphic_Strings {
     public boolean isIsomorphic(String s, String t) {
-        if (s == null || t == null || s.length() != t.length()) {
+        if (s.length() != t.length()) {
             return false;
         }
         

@@ -1,6 +1,6 @@
 package dyd.leetcode.q237;
 
-import dyd.leetcode.ListNode;
+import dyd.leetcode.common.ListNode;
 
 public class Q237_DeleteNodeInALinkedList {
     public void deleteNode(ListNode node) {

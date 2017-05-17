@@ -1,6 +1,6 @@
 package dyd.leetcode.q110;
 
-import dyd.leetcode.TreeNode;
+import dyd.leetcode.common.TreeNode;
 
 public class Q110_BalancedBT {
     public boolean isBalanced(TreeNode root) {
