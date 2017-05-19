@@ -28,7 +28,7 @@ The flattened tree should look like:
             \
              6
 
- * @author duyid
+ * @author dyd
  *
  */
 public class Q104_FlattenBTToLinkedList {
