@@ -32,6 +32,15 @@ public class PrintUtil {
 		System.out.println("]");
 	}
 	
+	public static void printList(ListNode list) {
+		System.out.print("[");
+		while (list != null) {
+			System.out.print(list.val + " ");
+			list = list.next;
+		}
+		System.out.println("]");
+	}
+	
 	public static void printNode(RandomListNode node) {
 		if (node != null) {
 			System.out.print(node.label);
