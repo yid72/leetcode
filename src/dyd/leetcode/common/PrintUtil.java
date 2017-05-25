@@ -1,11 +1,15 @@
 package dyd.leetcode.common;
 
 public class PrintUtil {
-	public static void printArray(int[] a) {
+	public static void printArray(int a[]) {
+		printArray(a, 0, a.length);
+	}
+	
+	public static void printArray(int[] a, int start, int len) {
 		System.out.print("[");
-		for (int i = 0; i < a.length; i++) {
+		for (int i = start; i < start + len; i++) {
 			System.out.print(a[i]);
-			if (i < a.length - 1) {
+			if (i < start + len - 1) {
 				System.out.print(' ');
 			}
 		}
