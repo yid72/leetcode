@@ -16,6 +16,12 @@ public class PrintUtil {
 		System.out.println("]");
 	}
 	
+	public static void printArray(int[][] a) {
+		for (int i = 0; i < a.length; i++) {
+			printArray(a[i]);
+		}
+	}
+	
 	public static void printList(RandomListNode head) {
 		if (head == null) {
 			return;
