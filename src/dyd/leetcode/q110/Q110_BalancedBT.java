@@ -2,15 +2,24 @@ package dyd.leetcode.q110;
 
 import dyd.leetcode.common.TreeNode;
 
+/**
+ * 
+Given a binary tree, determine if it is height-balanced.
+
+For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.
+
+ * @author dyd
+ *
+ */
 public class Q110_BalancedBT {
     public boolean isBalanced(TreeNode root) {
     	if (root == null) {
     		return true;
     	}
     	
-        return (isBalanced(root.left) &&
-        		isBalanced(root.right) &&
-        		Math.abs(height(root.left) - height(root.right)) <= 1);
+        return (Math.abs(height(root.left) - height(root.right)) <= 1) && 
+        		isBalanced(root.left) &&
+        		isBalanced(root.right);
     }
     
     private int height(TreeNode root) {
