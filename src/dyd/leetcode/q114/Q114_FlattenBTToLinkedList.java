@@ -1,4 +1,4 @@
-package dyd.leetcode.q104;
+package dyd.leetcode.q114;
 
 import dyd.leetcode.common.PrintUtil;
 import dyd.leetcode.common.TreeNode;
@@ -31,7 +31,7 @@ The flattened tree should look like:
  * @author dyd
  *
  */
-public class Q104_FlattenBTToLinkedList {
+public class Q114_FlattenBTToLinkedList {
     public void flatten(TreeNode root) {
     	if (root == null) {
     		return;
@@ -53,7 +53,7 @@ public class Q104_FlattenBTToLinkedList {
     }
     
     public static void main(String[] args) {
-    	Q104_FlattenBTToLinkedList q = new Q104_FlattenBTToLinkedList();
+    	Q114_FlattenBTToLinkedList q = new Q114_FlattenBTToLinkedList();
     	
     	TreeNode root = new TreeNode(1);
     	root.left = new TreeNode(2);
