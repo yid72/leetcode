@@ -1,5 +1,14 @@
 package dyd.leetcode.q012;
 
+/**
+ * 
+Given an integer, convert it to a roman numeral.
+
+Input is guaranteed to be within the range from 1 to 3999.
+
+ * @author dyd
+ *
+ */
 public class Q012_Int2Roman {
 	private static String[] romanSymbols = {"M", "CM", "DCCC", "DCC", "DC", "D", 
 				"CD", "CCC", "CC", "C", 
