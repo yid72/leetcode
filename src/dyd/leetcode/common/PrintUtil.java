@@ -1,5 +1,7 @@
 package dyd.leetcode.common;
 
+import java.util.List;
+
 public class PrintUtil {
 	public static void printArray(int a[]) {
 		printArray(a, 0, a.length);
@@ -49,6 +51,18 @@ public class PrintUtil {
 			list = list.next;
 		}
 		System.out.println("]");
+	}
+	
+	public static void printListList(List<List<Integer>> list) {
+    	System.out.println("[");
+    	for (List<Integer> inner : list) {
+    		System.out.print("[");
+    		for (Integer val : inner) {
+    			System.out.print(val + " ");
+    		}
+    		System.out.println("]");
+    	}
+    	System.out.println("]");		
 	}
 	
 	public static void printNode(RandomListNode node) {
