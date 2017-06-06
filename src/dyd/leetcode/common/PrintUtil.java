@@ -24,7 +24,7 @@ public class PrintUtil {
 		}
 	}
 	
-	public static void printList(RandomListNode head) {
+	public static void printRandomList(RandomListNode head) {
 		if (head == null) {
 			return;
 		}

@@ -62,9 +62,9 @@ public class Q138_CopyListWithRandomPair {
     	node3.next = node4;
     	node3.random = null;
     	node4.random = node4;
-    	PrintUtil.printList(node1);
+    	PrintUtil.printRandomList(node1);
     	
     	RandomListNode newHead = new Q138_CopyListWithRandomPair().copyRandomList(node1);
-    	PrintUtil.printList(newHead);
+    	PrintUtil.printRandomList(newHead);
     }
 }
