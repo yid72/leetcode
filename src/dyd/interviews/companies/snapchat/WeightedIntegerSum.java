@@ -1,4 +1,4 @@
-package dyd.companies.snapchat;
+package dyd.interviews.companies.snapchat;
 
 import java.util.ArrayList;
 import java.util.List;
