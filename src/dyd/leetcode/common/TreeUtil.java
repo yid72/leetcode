@@ -4,19 +4,42 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class TreeUtil {
-	public static TreeNode createTree(int[] vals) {
+	/**
+	 * Create a tree from an integer array. The array is a complete binary tree. 
+	 * A value of -1 means the node is null. e.g.,
+	 * 
+	 * [1, 2, 3, 4]
+	 * 
+	 *      1
+	 *     /  \
+	 *    2    3
+	 *   /
+	 *  4
+	 *  
+	 *  [1, 2, 3, -1, 4]
+	 *  
+	 *  	1
+	 *     / \
+	 *    2   3
+	 *     \
+	 *      4
+	 * 
+	 * @param vals	a complete binary tree
+	 * @return
+	 */
+	public static TreeNode createBinaryTree(int[] vals) {
 		if (vals == null || vals.length == 0) {
 			return null;
 		}
 		
-		TreeNode head = new TreeNode(0);
+		TreeNode root = new TreeNode(vals[0]);
 		
 		Queue<TreeNode> level = new LinkedList<TreeNode>();
-		level.add(head);
+		level.add(root);
 		
 		Queue<TreeNode> nextLevel = new LinkedList<TreeNode>();
 		
-		int i = 0;
+		int i = 1;
 		while (level.size() > 0 && i < vals.length) {
 			while (level.size() > 0 && i < vals.length) {
 				TreeNode parent = level.poll();
@@ -36,6 +59,6 @@ public class TreeUtil {
 			level = nextLevel;
 		}
 				
-		return head;
+		return root;
 	}
 }
