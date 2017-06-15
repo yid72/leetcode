@@ -3,8 +3,8 @@ package dyd.leetcode.q236;
 import java.util.ArrayList;
 import java.util.List;
 
-import dyd.leetcode.common.PrintUtil;
 import dyd.leetcode.common.TreeNode;
+import dyd.leetcode.common.TreeUtil;
 
 public class Q236_LCABinaryTree {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
@@ -81,22 +81,22 @@ public class Q236_LCABinaryTree {
     	
     	TreeNode lca = q.lowestCommonAncestor(root, nodes[6], nodes[7]);
     	System.out.print("The LCA of nodes 6 and 7 is: ");
-    	PrintUtil.printTreeNode(lca);
+    	TreeUtil.printTreeNode(lca);
     	System.out.println();
     	
     	lca = q.lowestCommonAncestor(root, nodes[6], nodes[0]);
     	System.out.print("The LCA of nodes 6 and 0 is: ");
-    	PrintUtil.printTreeNode(lca);
+    	TreeUtil.printTreeNode(lca);
     	System.out.println();
     	
     	lca = q.lowestCommonAncestor(root, nodes[1], nodes[3]);
     	System.out.print("The LCA of nodes 1 and 3 is: ");
-    	PrintUtil.printTreeNode(lca);    	
+    	TreeUtil.printTreeNode(lca);    	
     	System.out.println();
     	
     	lca = q.lowestCommonAncestor(root, nodes[0], nodes[3]);
     	System.out.print("The LCA of nodes 0 and 3 is: ");
-    	PrintUtil.printTreeNode(lca);    	
+    	TreeUtil.printTreeNode(lca);    	
     	System.out.println();    	
     }
 }

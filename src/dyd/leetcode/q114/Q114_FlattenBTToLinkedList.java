@@ -1,7 +1,7 @@
 package dyd.leetcode.q114;
 
-import dyd.leetcode.common.PrintUtil;
 import dyd.leetcode.common.TreeNode;
+import dyd.leetcode.common.TreeUtil;
 
 /**
 
@@ -63,6 +63,6 @@ public class Q114_FlattenBTToLinkedList {
     	root.right.left = new TreeNode(6);
     	
     	q.flatten(root);
-    	PrintUtil.printTreeNode(root);
+    	TreeUtil.printTreeNode(root);
     }
 }

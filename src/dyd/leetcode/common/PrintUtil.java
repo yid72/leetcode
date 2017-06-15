@@ -74,13 +74,6 @@ public class PrintUtil {
 		}
 	}
 	
-	public static void printTreeNode(TreeNode node)
-	{
-		if (node != null) {
-			System.out.print(node.val);
-		}
-	}
-	
 	public static void printInterval(Interval interval) {
 		System.out.print("[" + interval.start + ", " + interval.end + "]");
 	}
