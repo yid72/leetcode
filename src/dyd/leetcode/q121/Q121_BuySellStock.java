@@ -9,10 +9,10 @@ public class Q121_BuySellStock {
         }
         
         int buy = prices[0];
-        int sell = -1;
-        int maxProfit = -1;
+        int sell = 0;
+        int maxProfit = 0;
         for (int i = 1; i < prices.length; i++) {
-        	if (sell == -1) {
+        	if (sell == 0) {
         		if (prices[i] > buy) {
         			sell = prices[i];
         		}
@@ -24,14 +24,13 @@ public class Q121_BuySellStock {
         		sell = prices[i];
         	}
         	else if (prices[i] < buy) {
-        		maxProfit = Math.max(maxProfit, sell - buy);
         		buy = prices[i];
         		sell = -1;
         	}
+        	maxProfit = Math.max(maxProfit, sell - buy);
         }
         
-		maxProfit = Math.max(maxProfit, sell - buy);
-        return (maxProfit < 0) ? 0 : maxProfit;
+        return maxProfit;
     }
     
     public static void main(String[] args) {

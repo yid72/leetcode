@@ -1,0 +1,19 @@
+1.
+Task {
+threadId;
+startTime;
+}
+Implement a timer to execute the task.
+
+2.
+1) behavior questions
+2) System design. 
+
+3. Bar raiser
+1) a lot of behavior questions.
+2) a CSV file. columns:channel id, program name, start time, end time, bandwidth
+Find the maximum bandwidth the system needs
+
+4.
+1) behavior questions
+2) LRU cache. O(1)
