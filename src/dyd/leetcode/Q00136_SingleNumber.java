@@ -2,7 +2,7 @@ package dyd.leetcode;
 
 import dyd.leetcode.common.PrintUtil;
 
-public class Q00136 {
+public class Q00136_SingleNumber {
     public int singleNumber(int[] nums) {
         int result = 0;
         for (int num : nums) {
@@ -15,7 +15,7 @@ public class Q00136 {
         int[] data = new int[] {2, 2, 3, 1, 3};
         PrintUtil.printArray(data);
 
-        Q00136 q = new Q00136();
+        Q00136_SingleNumber q = new Q00136_SingleNumber();
         System.out.println(q.singleNumber(data));
     }
 }
