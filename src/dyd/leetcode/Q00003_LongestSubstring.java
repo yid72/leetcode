@@ -1,4 +1,4 @@
-package dyd.leetcode.q003;
+package dyd.leetcode;
 
 import java.util.HashMap;
 
@@ -17,7 +17,7 @@ Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer 
  * @author dyd
  *
  */
-public class Q003_LongestSubstring {
+public class Q00003_LongestSubstring {
     public int lengthOfLongestSubstring(String s) {
     	if (s == null || s.length() == 0) {
     		return 0;
@@ -57,7 +57,7 @@ public class Q003_LongestSubstring {
     }
     
     private static void test(String s) {
-    	Q003_LongestSubstring q = new Q003_LongestSubstring();
+    	Q00003_LongestSubstring q = new Q00003_LongestSubstring();
     	System.out.printf("ls('%s') = %d\n", s, q.lengthOfLongestSubstring(s));
     }
 }
