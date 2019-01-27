@@ -1,4 +1,4 @@
-package dyd.leetcode.q017;
+package dyd.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
  * @author dyd
  *
  */
-public class Q017_LetterCombinationOfPhoneNumber {
+public class Q00017_LetterCombinationOfPhoneNumber {
 	private static String[] map = {"0", "1", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 	
     public List<String> letterCombinations(String digits) {
@@ -39,7 +39,7 @@ public class Q017_LetterCombinationOfPhoneNumber {
     }
     
     public static void main(String[] args) {
-    	Q017_LetterCombinationOfPhoneNumber q = new Q017_LetterCombinationOfPhoneNumber();
+    	Q00017_LetterCombinationOfPhoneNumber q = new Q00017_LetterCombinationOfPhoneNumber();
     	List<String> result = q.letterCombinations("23");
     	System.out.println(result);
     }

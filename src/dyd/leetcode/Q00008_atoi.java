@@ -1,4 +1,4 @@
-package dyd.leetcode.q008;
+package dyd.leetcode;
 
 import java.math.BigInteger;
 
@@ -6,14 +6,16 @@ import java.math.BigInteger;
  * 
 Implement atoi to convert a string to an integer.
 
-Hint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the possible input cases.
+Hint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself
+ what are the possible input cases.
 
-Notes: It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.
+Notes: It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to
+ gather all the input requirements up front.
 
  * @author dyd
  *
  */
-public class Q008_atoi {
+public class Q00008_atoi {
     public int myAtoi(String str) {
     	if (str == null || str.trim().length() == 0) {
     		return 0;
@@ -60,7 +62,7 @@ public class Q008_atoi {
    }
     
     public static void main(String[] args) {
-    	Q008_atoi q = new Q008_atoi();
+    	Q00008_atoi q = new Q00008_atoi();
     	System.out.printf("%s=%d\n", "", q.myAtoi(""));
     	System.out.printf("%s=%d\n", "1234a5", q.myAtoi("1234a5"));
     	System.out.printf("%s=%d\n", "-1234", q.myAtoi("-1234"));

@@ -1,8 +1,8 @@
-package dyd.leetcode.q405;
+package dyd.leetcode;
 
 /**
  * 
-Given an integer, write an algorithm to convert it to hexadecimal. For negative integer, two’s complement method is used.
+Given an integer, write an algorithm to convert it to hexadecimal. For negative integer, twos complement method is used.
 
 Note:
 
@@ -29,7 +29,7 @@ Output:
  * @author dyd
  *
  */
-public class Q305_Number2Hex {
+public class Q00405_Number2Hex {
 	private static char[] map = {
 			'0', '1', '2', '3', '4', '5', 
 			'6', '7', '8', '9', 'a', 'b',
@@ -47,7 +47,7 @@ public class Q305_Number2Hex {
     }
     
     public static void main(String[] args) {
-    	Q305_Number2Hex q = new Q305_Number2Hex();
+    	Q00405_Number2Hex q = new Q00405_Number2Hex();
     	System.out.printf("%d=%s\n", 26, q.toHex(26));
     	System.out.printf("%d=%s\n", -1, q.toHex(-1));
     }

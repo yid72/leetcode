@@ -1,4 +1,4 @@
-package dyd.leetcode.q012;
+package dyd.leetcode;
 
 /**
  * 
@@ -9,7 +9,7 @@ Input is guaranteed to be within the range from 1 to 3999.
  * @author dyd
  *
  */
-public class Q012_Int2Roman {
+public class Q00012_Int2Roman {
 	private static String[] romanSymbols = {"M", "CM", "DCCC", "DCC", "DC", "D", 
 				"CD", "CCC", "CC", "C", 
 				"XC", "LXXX", "LXX", "LX", "L",
@@ -54,7 +54,7 @@ public class Q012_Int2Roman {
     }
     
     private static void test(int num) {
-    	Q012_Int2Roman q = new Q012_Int2Roman();
+    	Q00012_Int2Roman q = new Q00012_Int2Roman();
     	System.out.printf("%d = %s\n", num, q.intToRoman(num));
     }
 }

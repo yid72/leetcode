@@ -1,4 +1,4 @@
-package dyd.leetcode.q013;
+package dyd.leetcode;
 
 import java.util.HashMap;
 
@@ -11,7 +11,7 @@ Input is guaranteed to be within the range from 1 to 3999.
  * @author dyd
  *
  */
-public class Q013_Roman2Integer {
+public class Q00013_Roman2Integer {
 	private static HashMap<Character, Integer> map = new HashMap<Character, Integer>();
 	static {
 		map.put('M', 1000);
@@ -44,7 +44,7 @@ public class Q013_Roman2Integer {
     }
     
     private static void test(String s) {
-    	Q013_Roman2Integer q = new Q013_Roman2Integer();
+    	Q00013_Roman2Integer q = new Q00013_Roman2Integer();
     	System.out.printf("%s = %d\n", s, q.romanToInt(s));
     }
     
