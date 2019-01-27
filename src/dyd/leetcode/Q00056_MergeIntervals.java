@@ -1,9 +1,8 @@
-package dyd.leetcode.q056;
+package dyd.leetcode;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 import dyd.leetcode.common.Interval;
@@ -19,7 +18,7 @@ import dyd.leetcode.common.PrintUtil;
  * @author dyd
  *
  */
-public class Q056_MergeIntervals {
+public class Q00056_MergeIntervals {
 	class IntervalComparator implements Comparator<Interval> {
 		@Override
 		public int compare(Interval o1, Interval o2) {
@@ -65,7 +64,7 @@ public class Q056_MergeIntervals {
     }
     
     public static void main(String[] args) {
-    	Q056_MergeIntervals q = new Q056_MergeIntervals();
+    	Q00056_MergeIntervals q = new Q00056_MergeIntervals();
     	
     	List<Interval> intervals = new ArrayList<Interval>();
     	intervals.add(new Interval(1, 3));

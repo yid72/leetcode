@@ -1,4 +1,4 @@
-package dyd.leetcode.q023;
+package dyd.leetcode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -13,7 +13,7 @@ Merge k sorted linked lists and return it as one sorted list. Analyze and descri
 
  * @author dyd
  */
-public class Q023_mergeKSortedLists {
+public class Q00023_mergeKSortedLists {
 	class ListNodeAscendComparator implements Comparator<ListNode> {
 		@Override
 		public int compare(ListNode o1, ListNode o2) {
@@ -67,7 +67,7 @@ public class Q023_mergeKSortedLists {
 	}
 	
 	public static void main(String[] args) {
-		Q023_mergeKSortedLists q = new Q023_mergeKSortedLists();
+		Q00023_mergeKSortedLists q = new Q00023_mergeKSortedLists();
 		
 		ListNode[] lists = new ListNode[3];
 		lists[0] = ListUtil.createList(new int[] {-1, 1});
