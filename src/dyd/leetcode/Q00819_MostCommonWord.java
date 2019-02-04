@@ -38,43 +38,33 @@ public class Q00819_MostCommonWord {
     private static final String PUNCTUATIONS = "!?',;.";
 
     public String mostCommonWord(String paragraph, String[] banned) {
+        paragraph += ".";
+
         Set<String> bannedWords = new HashSet<>();
         bannedWords.addAll(Arrays.asList(banned));
 
         HashMap<String, Integer> wordCounts = new HashMap<>();
-        List<String> words = splitLowercaseWords(paragraph);
-        for (String word : words) {
-            String lowercaseWord = word.toLowerCase();
-            if (!bannedWords.contains(lowercaseWord)) {
-                int count = 0;
-                if (wordCounts.containsKey(lowercaseWord)) {
-                    count = wordCounts.get(lowercaseWord);
-                }
-                wordCounts.put(lowercaseWord, count + 1);
-            }
-        }
-
         int max = 0;
         String mostCommonWord = "";
-        for (Map.Entry<String, Integer> entry : wordCounts.entrySet()) {
-            if (entry.getValue() > max) {
-                max = entry.getValue();
-                mostCommonWord = entry.getKey();
-            }
-        }
-
-        return mostCommonWord;
-    }
-
-    private List<String> splitLowercaseWords(String paragraph) {
-        List<String> words = new ArrayList<>();
-
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < paragraph.length(); i++) {
             char ch = paragraph.charAt(i);
             if (ch == ' ' || PUNCTUATIONS.indexOf(ch) >=  0) {
                 if (sb.length() > 0) {
-                    words.add(sb.toString().toLowerCase());
+                    String word = sb.toString().toLowerCase();
+                    if (!bannedWords.contains(word)) {
+                        int count = 0;
+                        if (wordCounts.containsKey(word)) {
+                            count = wordCounts.get(word);
+                        }
+                        wordCounts.put(word, ++ count);
+
+                        if (count > max) {
+                            max = count;
+                            mostCommonWord = word;
+                        }
+                    }
+
                     sb = new StringBuilder();
                 }
             } else {
@@ -82,17 +72,17 @@ public class Q00819_MostCommonWord {
             }
         }
 
-        if (sb.length() > 0) {
-            words.add(sb.toString().toLowerCase());
-        }
-
-        return words;
+        return mostCommonWord;
     }
 
     public static void main(String[] args) {
         Q00819_MostCommonWord w = new Q00819_MostCommonWord();
         String paragraph = "Bob hit a ball, the hit BALL flew far after it was hit.";
         String[] banned = {"hit"};
+        System.out.println(w.mostCommonWord(paragraph, banned));
+
+        paragraph = "Bob";
+        banned = new String[] {""};
         System.out.println(w.mostCommonWord(paragraph, banned));
     }
 }
