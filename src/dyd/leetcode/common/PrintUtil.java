@@ -3,10 +3,19 @@ package dyd.leetcode.common;
 import java.util.List;
 
 public class PrintUtil {
+	public static void printArray(String name, int a[]) {
+		printArray(name, a, 0, a.length);
+	}
+
 	public static void printArray(int a[]) {
 		printArray(a, 0, a.length);
 	}
-	
+
+	public static void printArray(String name, int[] a, int start, int len) {
+		System.out.println(name + "=");
+		printArray(a, start, len);
+	}
+
 	public static void printArray(int[] a, int start, int len) {
 		System.out.print("[");
 		for (int i = start; i < start + len; i++) {
@@ -17,7 +26,12 @@ public class PrintUtil {
 		}
 		System.out.println("]");
 	}
-	
+
+	public static void printArray(String name, int[][] a) {
+		System.out.println(name + " = ");
+		printArray(a);
+	}
+
 	public static void printArray(int[][] a) {
 		for (int i = 0; i < a.length; i++) {
 			printArray(a[i]);
