@@ -25,10 +25,9 @@ public class Q00832_FlippingImage {
                 {1, 0, 1},
                 {0, 0, 0}
         };
-        PrintUtil.printArray(A);
+        PrintUtil.printArray("Input", A);
         A = q.flipAndInvertImage(A);
-        System.out.println();
-        PrintUtil.printArray(A);
+        PrintUtil.printArray("Output", A);
 
         int[][] B = {
                 {1, 1, 0, 0},
@@ -36,10 +35,8 @@ public class Q00832_FlippingImage {
                 {0, 1, 1, 1},
                 {1, 0, 1, 0}
         };
-        System.out.println();
-        PrintUtil.printArray(B);
+        PrintUtil.printArray("Input", B);
         B = q.flipAndInvertImage(B);
-        System.out.println();
-        PrintUtil.printArray(B);
+        PrintUtil.printArray("Output", B);
     }
 }
