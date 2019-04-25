@@ -1,4 +1,4 @@
-package dyd.leetcode.q283;
+package dyd.leetcode;
 
 import dyd.leetcode.common.PrintUtil;
 
@@ -12,34 +12,26 @@ import dyd.leetcode.common.PrintUtil;
  * 
  * @author dyd
  */
-public class Q283_MoveZeros {
+public class Q00283_MoveZeros {
     public void moveZeroes(int[] nums) {
     	if (nums.length <= 1) {
     		return;
     	}
     	
-    	int maxNonZero = nums.length - 1;
-    	while (maxNonZero >= 0 && nums[maxNonZero] == 0) {
-    		maxNonZero --;
-    	}
-    	
-    	int i = 0;
-    	while (i < maxNonZero) {
-    		if (nums[i] == 0) {
-    			for (int j = i+1; j <= maxNonZero; j++) {
-    				nums[j-1] = nums[j];
-    				nums[j] = 0;
-    			}
-    			maxNonZero --;
-    		}
-    		else {
-    			i ++;
-    		}
-    	}
+    	int j = 0;
+    	for (int i = 0; i < nums.length; i++) {
+    		if (nums[i] != 0) {
+				nums[j++] = nums[i];
+			}
+		}
+
+    	for (; j < nums.length; j++) {
+    		nums[j] = 0;
+		}
     }
     
     public static void main(String[] args) {
-    	Q283_MoveZeros q = new Q283_MoveZeros();
+    	Q00283_MoveZeros q = new Q00283_MoveZeros();
     	
     	int[] nums = {0, 1, 0, 3, 12};
     	q.moveZeroes(nums);
