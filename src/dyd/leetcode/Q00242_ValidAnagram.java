@@ -1,8 +1,8 @@
-package dyd.leetcode.q242;
+package dyd.leetcode;
 
 import java.util.HashMap;
 
-public class Q242_ValidAnagram {
+public class Q00242_ValidAnagram {
     public boolean isAnagram(String s, String t) {
     	if (s == null || t == null || s.length() != t.length()) {
     		return false;
@@ -32,7 +32,7 @@ public class Q242_ValidAnagram {
     }
     
     public static void main(String[] args) {
-    	Q242_ValidAnagram q = new Q242_ValidAnagram();
+    	Q00242_ValidAnagram q = new Q00242_ValidAnagram();
     	
     	System.out.println(q.isAnagram("anagram", "nagaram"));
     	System.out.println(q.isAnagram("car", "rat"));
