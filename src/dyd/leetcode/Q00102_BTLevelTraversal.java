@@ -1,4 +1,4 @@
-package dyd.leetcode.q102;
+package dyd.leetcode;
 
 import dyd.leetcode.common.TreeNode;
 
@@ -26,7 +26,7 @@ return its level order traversal as:
  * @author dyd
  *
  */
-public class Q102_BTLevelTraversal {
+public class Q00102_BTLevelTraversal {
     public List<List<Integer>> levelOrder(TreeNode root) {
     	List<List<Integer>> results = new ArrayList<List<Integer>>();
     	if (root == null) {
@@ -60,7 +60,7 @@ public class Q102_BTLevelTraversal {
     }
     
     public static void main(String[] args) {
-    	Q102_BTLevelTraversal q = new Q102_BTLevelTraversal();
+    	Q00102_BTLevelTraversal q = new Q00102_BTLevelTraversal();
     	
     	TreeNode root = new TreeNode(3);
     	root.left = new TreeNode(9);
