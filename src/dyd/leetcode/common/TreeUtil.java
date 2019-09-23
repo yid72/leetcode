@@ -1,6 +1,9 @@
 package dyd.leetcode.common;
 
+import dyd.leetcode.Q00655_PrintBinaryTree;
+
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Queue;
 
 public class TreeUtil {
@@ -38,7 +41,7 @@ public class TreeUtil {
 		level.add(root);
 		
 		Queue<TreeNode> nextLevel = new LinkedList<TreeNode>();
-		
+
 		int i = 1;
 		while (level.size() > 0 && i < vals.length) {
 			while (level.size() > 0 && i < vals.length) {
@@ -61,11 +64,24 @@ public class TreeUtil {
 				
 		return root;
 	}
-	
-	public static void printTreeNode(TreeNode node)
-	{
-		if (node != null) {
-			System.out.print(node.val);
+
+	public static void printTree(TreeNode root) {
+		Q00655_PrintBinaryTree printBinaryTree = new Q00655_PrintBinaryTree();
+		List<List<String>> result = printBinaryTree.printTree(root);
+		for (List<String> row : result) {
+			for (String col : row) {
+				System.out.printf("%3s ", col);
+			}
+			System.out.println();
 		}
-	}	
+	}
+
+	public static void main(String[] args) {
+		TreeNode root = new TreeNode(1);
+		root.left = new TreeNode(2);
+		root.right = new TreeNode(3);
+		root.left.right = new TreeNode(5);
+		root.right.left = new TreeNode(6);
+		TreeUtil.printTree(root);
+	}
 }
