@@ -1,0 +1,4 @@
+Amazon 20190926
+20. Valid parentheses
+155. min stack
+49. group anagrams

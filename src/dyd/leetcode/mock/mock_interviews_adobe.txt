@@ -1,0 +1,3 @@
+Adobe 20190928
+7. reverse integer
+561. array partition 1
