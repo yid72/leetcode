@@ -1,7 +1,5 @@
 package dyd.leetcode;
 
-import dyd.interviews.companies.amazon.onsite20170609.A3;
-
 import java.util.*;
 
 /**
@@ -45,7 +43,7 @@ public class Q00049_GroupAnagrams {
     }
 
     public static void main(String[] args) {
-        A3 q = new A3();
+        Q00049_GroupAnagrams q = new Q00049_GroupAnagrams();
         System.out.println(q.groupAnagrams(new String[] {"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
 }
