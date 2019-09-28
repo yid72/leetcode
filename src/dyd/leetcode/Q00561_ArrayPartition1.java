@@ -1,5 +1,9 @@
 package dyd.leetcode;
 
+import dyd.leetcode.common.PrintUtil;
+
+import java.util.Arrays;
+
 /**
  * Given an array of 2n integers, your task is to group these integers into n pairs of integer, say (a1, b1), (a2, b2), ..., (an, bn) which makes sum of min(ai, bi) for all i from 1 to n as large as possible.
  *
@@ -13,28 +17,24 @@ package dyd.leetcode;
  * All the integers in the array will be in the range of [-10000, 10000].
  */
 public class Q00561_ArrayPartition1 {
-    public int reverse(int x) {
-        int sign = x > 0? 1 : -1;
-        x = Math.abs(x);
-        long z = 0;
-        while (x > 0) {
-            int tmp = x%10;
-            x = x/10;
-            z = z*10 + tmp;
+    public int arrayPairSum(int[] nums) {
+        Arrays.sort(nums);
+
+        int maxSum = 0;
+        for (int i = nums.length - 1; i > 0; i -= 2) {
+            maxSum += nums[i - 1];
         }
-        z = sign * z;
-        return (z > Integer.MAX_VALUE || z < Integer.MIN_VALUE) ? 0 : (int) z;
+        return maxSum;
     }
 
     public static void main(String[] args) {
-        test(123);
-        test(-123);
-        test(120);
-        test(1534236469);
+        test(new int[] {1,4,3,2});
     }
 
-    private static void test(int x) {
+    private static void test(int[] nums) {
+        PrintUtil.printArray(nums);
+
         Q00561_ArrayPartition1 q = new Q00561_ArrayPartition1();
-        System.out.println(x + ": " + q.reverse(x));
+        System.out.println(q.arrayPairSum(nums));
     }
 }
