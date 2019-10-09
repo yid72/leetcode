@@ -1,4 +1,4 @@
-package dyd.leetcode.q027;
+package dyd.leetcode;
 
 import dyd.leetcode.common.PrintUtil;
 
@@ -18,23 +18,19 @@ Your function should return length = 2, with the first two elements of nums bein
  * @author dyd
  *
  */
-public class Q027_RemoveElement {
+public class Q00027_RemoveElement {
     public int removeElement(int[] nums, int val) {
-        int j = 0;
-        int i = 0;
-        while (i < nums.length) {
-        	if (nums[i] == val) {
-        		i ++;
-        	}
-        	else {
-        		nums[j ++] = nums[i ++]; 
-        	}
-        }
-        return j;
+		int i = 0;
+		for (int j = 0; j < nums.length; j++) {
+			if (nums[j] != val) {
+				nums[i ++] = nums[j];
+			}
+		}
+		return i;
     }
     
     public static void main(String[] args) {
-    	Q027_RemoveElement q = new Q027_RemoveElement();
+    	Q00027_RemoveElement q = new Q00027_RemoveElement();
     	
     	int[] nums = new int[] {3, 2, 3, 2};
     	int len = q.removeElement(nums, 3);
