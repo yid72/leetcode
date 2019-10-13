@@ -1,4 +1,4 @@
-package dyd.leetcode.q215;
+package dyd.leetcode;
 
 import dyd.leetcode.common.PrintUtil;
 
@@ -15,7 +15,7 @@ You may assume k is always valid, 1 <= k <= array's length.
  * @author dyd
  *
  */
-public class Q215_KthLargestElementInArray {
+public class Q00215_KthLargestElementInArray {
     public int findKthLargest(int[] nums, int k) {
     	return findKthLargest(nums, 0, nums.length -1, k);
     }
@@ -55,7 +55,7 @@ public class Q215_KthLargestElementInArray {
     }
     
     private static void test(int[] nums, int k) {
-    	Q215_KthLargestElementInArray q = new Q215_KthLargestElementInArray();
+    	Q00215_KthLargestElementInArray q = new Q00215_KthLargestElementInArray();
     	PrintUtil.printArray(nums);
     	System.out.printf("K = %d, %d", k, q.findKthLargest(nums, k));
     }
