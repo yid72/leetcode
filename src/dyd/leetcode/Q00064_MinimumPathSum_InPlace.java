@@ -1,6 +1,6 @@
-package dyd.leetcode.q064;
+package dyd.leetcode;
 
-public class Q064_MinimuamPathSum {
+public class Q00064_MinimumPathSum_InPlace {
     public int minPathSum(int[][] grid) {
     	if (grid.length == 0) {
     		return 0;
