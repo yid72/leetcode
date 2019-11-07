@@ -15,4 +15,17 @@ public class ListUtil {
 		
 		return head;
 	}
+
+	public static void printList(ListNode list) {
+		System.out.print("[");
+		if (list != null) {
+			System.out.print(list.val);
+			list = list.next;
+		}
+		while (list != null) {
+			System.out.print(" " + list.val);
+			list = list.next;
+		}
+		System.out.println("]");
+	}
 }
