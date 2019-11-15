@@ -1,11 +1,24 @@
-package dyd.leetcode.q014;
+package dyd.leetcode;
 
 /**
- * 
- * @author duyid
+ * 14. Longest Common Prefix
  *
+ * Easy
+ *
+ * Write a function to find the longest common prefix string amongst an array of strings.
+ * If there is no common prefix, return an empty string "".
+ * Example 1:
+ * Input: ["flower","flow","flight"]
+ * Output: "fl"
+ * Example 2:
+ * Input: ["dog","racecar","car"]
+ * Output: ""
+ * Explanation: There is no common prefix among the input strings.
+ *
+ * Note:
+ * All given inputs are in lowercase letters a-z. *
  */
-public class Q014_LongestCommonPrefix {
+public class Q00014_LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
     	if (strs == null || strs.length == 0) {
     		return "";
@@ -42,7 +55,7 @@ public class Q014_LongestCommonPrefix {
     }
     
     private static void test(String[] strs) {
-    	Q014_LongestCommonPrefix q = new Q014_LongestCommonPrefix();
+    	Q00014_LongestCommonPrefix q = new Q00014_LongestCommonPrefix();
     	System.out.println(q.longestCommonPrefix(strs));
     }
 }
