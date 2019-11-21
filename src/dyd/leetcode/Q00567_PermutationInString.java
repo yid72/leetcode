@@ -67,8 +67,8 @@ public class Q00567_PermutationInString {
     }
 
     public static void main(String[] args) {
-//        test("ab", "eidbaooo");
-//        test("ab", "eidboaoo");
+        test("ab", "eidbaooo");
+        test("ab", "eidboaoo");
         test("adc", "dcda");
     }
 
