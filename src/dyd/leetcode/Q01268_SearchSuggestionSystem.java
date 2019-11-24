@@ -1,4 +1,4 @@
-package dyd.leetcode.contests.p20191012;
+package dyd.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
