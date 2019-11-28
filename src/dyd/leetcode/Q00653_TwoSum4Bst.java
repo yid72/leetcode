@@ -1,4 +1,4 @@
-package dyd.leetcode.mock;
+package dyd.leetcode;
 
 import dyd.leetcode.common.TreeNode;
 import dyd.leetcode.common.TreeUtil;
