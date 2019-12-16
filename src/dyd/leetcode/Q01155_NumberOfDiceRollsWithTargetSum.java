@@ -1,7 +1,5 @@
 package dyd.leetcode;
 
-import java.util.Arrays;
-
 /**
  * 1155. Number of Dice Rolls With Target Sum -- Medium
  *
@@ -82,7 +80,7 @@ public class Q01155_NumberOfDiceRollsWithTargetSum {
     }
 
     private static void test(int d, int f, int target) {
-        dyd.leetcode.mock.Q01155_NumberOfDiceRollsWithTargetSum q = new dyd.leetcode.mock.Q01155_NumberOfDiceRollsWithTargetSum();
+        Q01155_NumberOfDiceRollsWithTargetSum q = new Q01155_NumberOfDiceRollsWithTargetSum();
         System.out.printf("d=%d, f=%d, target=%d: %d\n", d, f, target, q.numRollsToTarget(d, f, target));
     }
 }
