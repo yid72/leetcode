@@ -21,7 +21,7 @@ import java.util.Arrays;
  * Note:
  * You may assume that you have an infinite number of each kind of coin.
  */
-public class Q0322_CoinChange {
+public class Q00322_CoinChange {
     public int coinChange(int[] coins, int amount) {
         return coinChange(coins, amount, new Integer[amount]);
     }
@@ -58,7 +58,7 @@ public class Q0322_CoinChange {
     }
 
     private static void test(int[] coins, int amount) {
-        Q0322_CoinChange q = new Q0322_CoinChange();
+        Q00322_CoinChange q = new Q00322_CoinChange();
         System.out.printf("coins=%s, amount=%d: %d\n", Arrays.toString(coins), amount, q.coinChange(coins, amount));
     }
 }
