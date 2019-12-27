@@ -3,8 +3,7 @@ package dyd.leetcode;
 import dyd.leetcode.common.TreeNode;
 import dyd.leetcode.common.TreeUtil;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Stack;
 
 /**
  * Given a binary search tree, write a function kthSmallest to find the kth smallest element in it.
@@ -38,32 +37,27 @@ import java.util.List;
  */
 public class Q00230_KthSmallestElementInBst {
     public int kthSmallest(TreeNode root, int k) {
-        List<Integer> count = new ArrayList<>();
-        count.add(0);
-        return kthSmallest(root, k, count);
+        Stack<TreeNode> stack = new Stack<>();
+        pushAllLeftChildren(stack, root);
+
+        while (!stack.empty()) {
+            TreeNode node = stack.pop();
+            if (-- k == 0) {
+                return node.val;
+            }
+
+            if (node.right != null) {
+                pushAllLeftChildren(stack, node.right);
+            }
+        }
+        return 0;
     }
 
-    private int kthSmallest(TreeNode node, int k, List<Integer> count) {
-        if (node.left != null) {
-            int val = kthSmallest(node.left, k, count);
-            if (val < Integer.MAX_VALUE) {
-                return val;
-            }
+    private void pushAllLeftChildren(Stack<TreeNode> stack, TreeNode node) {
+        while (node != null) {
+            stack.push(node);
+            node = node.left;
         }
-
-        count.set(0, count.get(0) + 1);
-        if (count.get(0) == k) {
-            return node.val;
-        }
-
-        if (node.right != null) {
-            int val = kthSmallest(node.right, k, count);
-            if (val < Integer.MAX_VALUE) {
-                return val;
-            }
-        }
-
-        return Integer.MAX_VALUE;
     }
 
     public static void main(String[] args) {
