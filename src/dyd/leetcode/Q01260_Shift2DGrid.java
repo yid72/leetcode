@@ -41,7 +41,7 @@ import java.util.List;
  * -1000 <= grid[i][j] <= 1000
  * 0 <= k <= 100
  */
-public class Q05263_Shift2DGrid {
+public class Q01260_Shift2DGrid {
     private int n;
     private int m;
 
@@ -102,7 +102,7 @@ public class Q05263_Shift2DGrid {
     private static void test(int[][] grid, int k) {
         System.out.println(Arrays.deepToString(grid));
         System.out.println("k = " + k);
-        Q05263_Shift2DGrid q = new Q05263_Shift2DGrid();
+        Q01260_Shift2DGrid q = new Q01260_Shift2DGrid();
         System.out.println(q.shiftGrid(grid, k));
     }
 }
