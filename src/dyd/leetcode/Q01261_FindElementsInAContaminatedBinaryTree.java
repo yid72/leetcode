@@ -74,10 +74,10 @@ import java.util.Set;
  * Total calls of find() is between [1, 10^4]
  * 0 <= target <= 10^6
  */
-public class Q05264_FindElementsInAContaminatedBinaryTree {
+public class Q01261_FindElementsInAContaminatedBinaryTree {
     private Set<Integer> vals = new HashSet();
 
-    public Q05264_FindElementsInAContaminatedBinaryTree(TreeNode root) {
+    public Q01261_FindElementsInAContaminatedBinaryTree(TreeNode root) {
         if (root == null) {
             return;
         }
@@ -127,7 +127,7 @@ public class Q05264_FindElementsInAContaminatedBinaryTree {
 
     private static void test(TreeNode root, int[] targets) {
         TreeUtil.printTree(root);
-        Q05264_FindElementsInAContaminatedBinaryTree q = new Q05264_FindElementsInAContaminatedBinaryTree(root);
+        Q01261_FindElementsInAContaminatedBinaryTree q = new Q01261_FindElementsInAContaminatedBinaryTree(root);
         TreeUtil.printTree(root);
 
         for (int target : targets) {
