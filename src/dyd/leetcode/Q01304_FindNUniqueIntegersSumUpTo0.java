@@ -3,7 +3,7 @@ package dyd.leetcode;
 import java.util.Arrays;
 
 /**
- * 5295. Find N Unique Integers Sum up to Zero -- Easy
+ * 1304. Find N Unique Integers Sum up to Zero -- Easy
  *
  * Given an integer n, return any array containing n unique integers such that they add up to 0.
  *
@@ -26,7 +26,7 @@ import java.util.Arrays;
  *
  * 1 <= n <= 1000
  */
-public class Q05295_FindNUniqueIntegersSumUpTo0 {
+public class Q01304_FindNUniqueIntegersSumUpTo0 {
     public int[] sumZero(int n) {
         int[] ret = new int[n];
 
@@ -51,7 +51,7 @@ public class Q05295_FindNUniqueIntegersSumUpTo0 {
     }
 
     private static void test(int n) {
-        Q05295_FindNUniqueIntegersSumUpTo0 q = new Q05295_FindNUniqueIntegersSumUpTo0();
+        Q01304_FindNUniqueIntegersSumUpTo0 q = new Q01304_FindNUniqueIntegersSumUpTo0();
         System.out.println(Arrays.toString(q.sumZero(n)));
     }
 }

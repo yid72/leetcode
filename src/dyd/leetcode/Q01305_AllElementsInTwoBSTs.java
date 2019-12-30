@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 5296. All Elements in Two Binary Search Trees -- Medium
+ * 1305. All Elements in Two Binary Search Trees -- Medium
  *
  * Given two binary search trees root1 and root2.
  *
@@ -43,7 +43,7 @@ import java.util.List;
  * Each tree has at most 5000 nodes.
  * Each node's value is between [-10^5, 10^5].
  */
-public class Q05296_AllElementsInTwoBSTs {
+public class Q01305_AllElementsInTwoBSTs {
     public List<Integer> getAllElements(TreeNode root1, TreeNode root2) {
         List<Integer> nums1 = new ArrayList<>();
         inOrder(root1, nums1);

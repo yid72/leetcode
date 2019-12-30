@@ -3,7 +3,7 @@ package dyd.leetcode;
 import java.util.Arrays;
 
 /**
- * 5297. Jump Game III -- Medium
+ * 1306. Jump Game III -- Medium
  *
  * Given an array of non-negative integers arr, you are initially positioned at start index of the array. When you are
  * at index i, you can jump to i + arr[i] or i - arr[i], check if you can reach to any index with value 0.
@@ -38,7 +38,7 @@ import java.util.Arrays;
  * 0 <= arr[i] < arr.length
  * 0 <= start < arr.length
  */
-public class Q05297_JumpGame3 {
+public class Q01306_JumpGame3 {
     private Boolean[] dp;
     private boolean[] visited;
 
@@ -73,7 +73,7 @@ public class Q05297_JumpGame3 {
     }
 
     private static void test(int[] arr, int start) {
-        Q05297_JumpGame3 q = new Q05297_JumpGame3();
+        Q01306_JumpGame3 q = new Q01306_JumpGame3();
         System.out.printf("arr=%s, start=%d: %b\n", Arrays.toString(arr), start, q.canReach(arr, start));
     }
 }
