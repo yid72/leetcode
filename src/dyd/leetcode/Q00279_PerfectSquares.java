@@ -50,11 +50,9 @@ public class Q00279_PerfectSquares {
     }
 
     public static void main(String[] args) {
-        test(3);
-        test(4);
-        test(5);
-        test(12);
-        test(13);
+        for (int i = 1; i <= 20; i++) {
+            test(i);
+        }
     }
 
     private static void test(int n) {
