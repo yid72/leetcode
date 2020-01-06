@@ -1,0 +1,29 @@
+680. valid palindrome 2 -- easy
+560. subarray sum equals k -- medium
+238. product of array except self -- medium
+
+23. merge k sorted lists -- hard
+34. find first and last position of element in sorted array -- medium
+39. combination sum -- medium
+54. spiral matrix -- medium
+56. merge intervals -- medium
+125. valid palindrome -- easy
+162. find peak element -- medium
+206. reverse linked list -- easy
+300. longest increasing subsequence -- medium
+336. Palindrome pairs -- hard
+347. Top K Frequent Elements -- medium
+543. Diameter of Binary Tree -- easy
+
+string comparator, compare the character and number separately
+given string s, string t, if s > t, return negative
+                                                     s = t, return 0
+                                                     s < t, return positive
+                 s: a2b
+                 t: a10b    s < t,  because 2 < 10
+
+                 s: b2b
+                 t: a10b   s > t, because b > a
+
+                 s: a2b
+                 t: a2bb   s < t, because b > null
