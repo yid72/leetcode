@@ -30,35 +30,35 @@ public class TreeUtil {
 	 * @param vals	a complete binary tree
 	 * @return
 	 */
-	public static TreeNode createBinaryTree(int[] vals) {
+	public static TreeNode createBinaryTree(Integer[] vals) {
 		if (vals == null || vals.length == 0) {
 			return null;
 		}
 		
 		TreeNode root = new TreeNode(vals[0]);
 		
-		Queue<TreeNode> level = new LinkedList<TreeNode>();
+		Queue<TreeNode> level = new LinkedList<>();
 		level.add(root);
 		
-		Queue<TreeNode> nextLevel = new LinkedList<TreeNode>();
+		Queue<TreeNode> nextLevel = new LinkedList<>();
 
 		int i = 1;
 		while (level.size() > 0 && i < vals.length) {
-			while (level.size() > 0 && i < vals.length) {
+			while (level.size() > 0) {
 				TreeNode parent = level.poll();
-				if (vals[i] != -1) {
+				if (i < vals.length && vals[i] != null) {
 					parent.left = new TreeNode(vals[i]);
 					nextLevel.add(parent.left);
 				}
 				i ++;
 				
-				if (i < vals.length && vals[i] != -1) {
+				if (i < vals.length && vals[i] != null) {
 					parent.right = new TreeNode(vals[i]);
 					nextLevel.add(parent.right);
 				}
 				i ++;
 			}
-			
+
 			level = nextLevel;
 		}
 				

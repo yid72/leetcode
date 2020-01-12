@@ -1,8 +1,9 @@
 package dyd.leetcode;
 
-import dyd.leetcode.common.PrintUtil;
 import dyd.leetcode.common.TreeNode;
 import dyd.leetcode.common.TreeUtil;
+
+import java.util.Arrays;
 
 /**
  * A binary tree is univalued if every node in the tree has the same value.
@@ -29,17 +30,16 @@ public class Q00965_UnivaluedBinaryTree {
         return node.val == value && isUnivalTree(node.left, value) && isUnivalTree(node.right, value);
     }
 
-    private static void test(int[] tree) {
+    private static void test(Integer[] tree) {
         Q00965_UnivaluedBinaryTree q = new Q00965_UnivaluedBinaryTree();
         TreeNode root = TreeUtil.createBinaryTree(tree);
-        System.out.print("Input: ");
-        PrintUtil.printArray(tree);
+        System.out.print("Input: " + Arrays.toString(tree));
         System.out.println("Result: " + q.isUnivalTree(root));
     }
 
     public static void main(String[] args) {
-        test(new int[] {1, 1, -1, 1, 1});
-        test(new int[] {1, 1, -1, 2, 1});
-        test(new int[] {});
+        test(new Integer[] {1, 1, null, 1, 1});
+        test(new Integer[] {1, 1, null, 2, 1});
+        test(new Integer[] {});
     }
 }

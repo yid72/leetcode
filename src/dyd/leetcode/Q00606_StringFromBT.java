@@ -1,4 +1,4 @@
-package dyd.leetcode.q0606;
+package dyd.leetcode;
 
 import dyd.leetcode.common.TreeNode;
 import dyd.leetcode.common.TreeUtil;
@@ -38,7 +38,7 @@ except we can't omit the first parenthesis pair to break the one-to-one mapping 
  * @author dyd
  *
  */
-public class Q0606_StringFromBT {
+public class Q00606_StringFromBT {
     public String tree2str(TreeNode t) {
         StringBuilder sb = new StringBuilder();
         tree2Str(t, sb);
@@ -66,12 +66,12 @@ public class Q0606_StringFromBT {
     }
     
     public static void main(String[] args) {
-    	test(new int[] {1, 2, 3, 4});
-    	test(new int[] {1, 2, 3, -1, 4});
+    	test(new Integer[] {1, 2, 3, 4});
+    	test(new Integer[] {1, 2, 3, null, 4});
     }
     
-    private static void test(int[] vals) {
-    	Q0606_StringFromBT q = new Q0606_StringFromBT();
+    private static void test(Integer[] vals) {
+    	Q00606_StringFromBT q = new Q00606_StringFromBT();
     	TreeNode root = TreeUtil.createBinaryTree(vals);
     	System.out.println(q.tree2str(root));
     }
