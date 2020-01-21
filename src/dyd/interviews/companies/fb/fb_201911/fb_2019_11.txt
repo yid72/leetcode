@@ -1,2 +1,15 @@
 20191115 Phone interview
 Leetcode 394. decode string
+
+20200116 onsite
+1. behavior + 1 simple coding. implement the following method.
+compare(char[] s1, char[] s2, int n)
+compare two character arrays. return -1 if s1<s2. 1 if s1>s2. otherwise 0
+n is the number of characters to be compared.
+e.g. compare("ab", "abc", 2) returns 0
+compare("ab", "ac", 3) returns -1
+2. leetcode 24, 1249
+3. leetcode 117, 211
+4. design. facebook users search keywords. returns the posts that include the keywords
+how to scale. improve latency. availability.
+5. leetcode 721
