@@ -1,0 +1,12 @@
+20200117 onsite
+1. design. design google ads system.
+2. leetcode 267
+3. behavior questions
+4. design. a token management system. before a client can call an api, it needs to get a token first. once it is done
+with the call. it needs to release the token.
+interface TokenManager {
+    String getToken();
+    void releaseToken(String token);
+}
+design the token management system. improve performance. how to scale. clients in different regions.
+5. leetcode 105. amazon recommendation system.
