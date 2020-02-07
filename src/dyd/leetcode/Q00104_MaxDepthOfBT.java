@@ -23,7 +23,7 @@ import dyd.leetcode.common.TreeNode;
  * return its depth = 3.
  *
  */
-public class Q0104_MaxDepthOfBT {
+public class Q00104_MaxDepthOfBT {
     public int maxDepth(TreeNode root) {
         if (root == null) {
         	return 0;

@@ -37,7 +37,7 @@ import dyd.leetcode.common.TreeNode;
  *
  * Output: false
  */
-public class Q0100_SameTree {
+public class Q00100_SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
         	return true;
