@@ -1,22 +1,24 @@
-package dyd.leetcode.q0096;
+package dyd.leetcode;
 
 /**
- * 
-Given n, how many structurally unique BST's (binary search trees) that store values 1...n?
-
-For example,
-Given n = 3, there are a total of 5 unique BST's.
-
-   1         3     3      2      1
-    \       /     /      / \      \
-     3     2     1      1   3      2
-    /     /       \                 \
-   2     1         2                 3
-   
- * @author dyd
+ * 96. Unique Binary Search Trees -- Medium
  *
+ * Given n, how many structurally unique BST's (binary search trees) that store values 1 ... n?
+ *
+ * Example:
+ *
+ * Input: 3
+ * Output: 5
+ * Explanation:
+ * Given n = 3, there are a total of 5 unique BST's:
+ *
+ *    1         3     3      2      1
+ *     \       /     /      / \      \
+ *      3     2     1      1   3      2
+ *     /     /       \                 \
+ *    2     1         2                 3
  */
-public class Q0096_UniqueBSTs {
+public class Q00096_UniqueBSTs {
     public int numTrees(int n) {
     	if (n <= 1) {
     		return 1;
@@ -36,7 +38,7 @@ public class Q0096_UniqueBSTs {
     }
     
     private static void test(int n) {
-    	Q0096_UniqueBSTs q = new Q0096_UniqueBSTs();
+    	Q00096_UniqueBSTs q = new Q00096_UniqueBSTs();
     	System.out.printf("f(%d) = %d\n", n, q.numTrees(n));
     }
     
