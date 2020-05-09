@@ -1,3 +1,6 @@
 20191101
 290. Word pattern
 542. 0-1 matrix
+
+20191103
+230 Kth smallest element in a BST

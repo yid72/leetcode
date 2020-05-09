@@ -1,4 +1,4 @@
-20200117 onsite
+20200117 Onsite. Mountain View. L5/L6
 1. design. design google ads system.
 2. leetcode 267
 3. behavior questions
@@ -10,3 +10,7 @@ interface TokenManager {
 }
 design the token management system. improve performance. how to scale. clients in different regions.
 5. leetcode 105. amazon recommendation system.
+
+20200207 Seattle. L4
+1. DAG
+2. Iterator<Integer>
