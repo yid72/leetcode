@@ -1,0 +1,15 @@
+20200224. phone screen 1
+counting sort. e.g. "abbbbcc" -> "bbbbcca"
+
+20200131. phone screen 2
+Leetcode 973. K closet points to origin
+Leetcode 50. pow(x,n)
+
+20200313. video
+1. coding. Leetcode 127. word ladder
+2. coding. 1) Leetcode 297. serialize/deserialize BT 2) generate a random tree.
+3. design twitter.
+postTweet:
+getFolloweesTweets:
+4. behavior
+5. behavior
