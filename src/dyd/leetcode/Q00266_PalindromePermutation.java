@@ -21,24 +21,19 @@ import java.util.Map;
  */
 public class Q00266_PalindromePermutation {
     public boolean canPermutePalindrome(String s) {
-        Map<Character, Integer> chCounts = new HashMap<>();
+        Map<Character, Integer> charCounts = new HashMap<>();
+        int oddCount = 0;
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            if (chCounts.containsKey(ch)) {
-                chCounts.put(ch, chCounts.get(ch) + 1);
+            int count = charCounts.getOrDefault(ch, 0) + 1;
+            charCounts.put(ch, count);
+            if (count % 2 == 0) {
+                oddCount --;
             } else {
-                chCounts.put(ch, 1);
+                oddCount ++;
             }
         }
-        int oddCount = 0;
-        for (Integer count : chCounts.values()) {
-            if (count % 2 == 1) {
-                if (++ oddCount > 1) {
-                    return false;
-                }
-            }
-        }
-        return true;
+        return oddCount <= 1;
     }
 
     public static void main(String[] args) {
