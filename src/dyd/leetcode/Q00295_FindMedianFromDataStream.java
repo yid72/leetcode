@@ -35,29 +35,29 @@ import java.util.PriorityQueue;
  * If 99% of all integer numbers from the stream are between 0 and 100, how would you optimize it?
  */
 public class Q00295_FindMedianFromDataStream {
-    private PriorityQueue<Integer> maxHeap;
-    private PriorityQueue<Integer> minHeap;
+    private PriorityQueue<Integer> hiHeap; // heap for higher half of numbers
+    private PriorityQueue<Integer> loHeap; // heap for lower half of numbers
 
     /** initialize your data structure here. */
     public Q00295_FindMedianFromDataStream() {
-        maxHeap = new PriorityQueue<>();
-        minHeap = new PriorityQueue<>(Collections.reverseOrder());
+        hiHeap = new PriorityQueue<>();
+        loHeap = new PriorityQueue<>(Collections.reverseOrder());
     }
 
     public void addNum(int num) {
-        maxHeap.add(num);
-        minHeap.add(maxHeap.poll());
-        if (minHeap.size() > maxHeap.size()) {
-            maxHeap.add(minHeap.poll());
+        hiHeap.add(num);
+        loHeap.add(hiHeap.poll());
+        if (loHeap.size() > hiHeap.size()) {
+            hiHeap.add(loHeap.poll());
         }
     }
 
     public double findMedian() {
-        if (maxHeap.size() == 0 && minHeap.size() == 0) {
+        if (hiHeap.size() == 0 && loHeap.size() == 0) {
             return 0;
         }
 
-        return maxHeap.size() > minHeap.size() ? maxHeap.peek() : (maxHeap.peek() + minHeap.peek()) / 2.0;
+        return hiHeap.size() > loHeap.size() ? hiHeap.peek() : (hiHeap.peek() + loHeap.peek()) / 2.0;
     }
 
     public static void main(String[] args) {
